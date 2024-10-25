@@ -1,0 +1,9 @@
+C:\Users\unifafibe.UNIDC_ACD\Downloads\24ProjetoPOOB-main\ProjetoPOOB\bin\Debug\ProjetoPOOB.exe.config
+C:\Users\unifafibe.UNIDC_ACD\Downloads\24ProjetoPOOB-main\ProjetoPOOB\bin\Debug\ProjetoPOOB.exe
+C:\Users\unifafibe.UNIDC_ACD\Downloads\24ProjetoPOOB-main\ProjetoPOOB\bin\Debug\ProjetoPOOB.pdb
+C:\Users\unifafibe.UNIDC_ACD\Downloads\24ProjetoPOOB-main\ProjetoPOOB\obj\Debug\ProjetoPOOB.csproj.AssemblyReference.cache
+C:\Users\unifafibe.UNIDC_ACD\Downloads\24ProjetoPOOB-main\ProjetoPOOB\obj\Debug\ProjetoPOOB.Properties.Resources.resources
+C:\Users\unifafibe.UNIDC_ACD\Downloads\24ProjetoPOOB-main\ProjetoPOOB\obj\Debug\ProjetoPOOB.csproj.GenerateResource.cache
+C:\Users\unifafibe.UNIDC_ACD\Downloads\24ProjetoPOOB-main\ProjetoPOOB\obj\Debug\ProjetoPOOB.csproj.CoreCompileInputs.cache
+C:\Users\unifafibe.UNIDC_ACD\Downloads\24ProjetoPOOB-main\ProjetoPOOB\obj\Debug\ProjetoPOOB.exe
+C:\Users\unifafibe.UNIDC_ACD\Downloads\24ProjetoPOOB-main\ProjetoPOOB\obj\Debug\ProjetoPOOB.pdb

@@ -1,0 +1,17 @@
+C:\Users\unifafibe.UNIDC_ACD\Downloads\obj\Debug\PRJ_AIFUD.csproj.AssemblyReference.cache
+C:\Users\unifafibe.UNIDC_ACD\Downloads\obj\Debug\ProjetoPOOB.Form1.resources
+C:\Users\unifafibe.UNIDC_ACD\Downloads\obj\Debug\ProjetoPOOB.Properties.Resources.resources
+C:\Users\unifafibe.UNIDC_ACD\Downloads\obj\Debug\PRJ_AIFUD.csproj.GenerateResource.cache
+C:\Users\unifafibe.UNIDC_ACD\Downloads\obj\Debug\PRJ_AIFUD.csproj.CoreCompileInputs.cache
+C:\Users\unifafibe.UNIDC_ACD\Downloads\obj\Debug\ProjetoPOOB.exe
+C:\Users\unifafibe.UNIDC_ACD\Downloads\obj\Debug\ProjetoPOOB.pdb
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.AssemblyReference.cache
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Form1.resources
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Properties.Resources.resources
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.GenerateResource.cache
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.CoreCompileInputs.cache
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\obj\Debug\ProjetoPOOB.exe
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\obj\Debug\ProjetoPOOB.pdb
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe.config
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe
+C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\bin\Debug\ProjetoPOOB.pdb
