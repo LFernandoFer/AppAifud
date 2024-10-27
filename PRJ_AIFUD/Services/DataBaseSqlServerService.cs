@@ -16,7 +16,7 @@ namespace ProjetoPOOB.Services
 
             //Os dados para conectar no banco
             conexao.ConnectionString =
-                "Data Source=.UNI-LAB5-021;" + //Servidor
+                "Data Source=LFFJ;" + //Servidor
                 "Initial Catalog=PRJ_AIFUD;" + //Nome do Banco
                 "Integrated Security=SSPI;" + //Autenticação do Windows (usuario logado)
                 "User Instance=false;"; //Usar o usuario da maquina
@@ -47,7 +47,7 @@ namespace ProjetoPOOB.Services
             SqlParameterCollection sqlParameterCollection =
              new SqlCommand().Parameters;
 
-        //Métod para limpar os parametros
+        //Método para limpar os parametros
         public void LimparParametros()
         {
             sqlParameterCollection.Clear();

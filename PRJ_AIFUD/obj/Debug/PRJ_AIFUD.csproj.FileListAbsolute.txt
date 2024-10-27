@@ -15,3 +15,14 @@ C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\obj\Debug\ProjetoPOOB.pdb
 C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe.config
 C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe
 C:\Users\unifafibe.UNIDC_ACD\Downloads\PRJ_AIFUD\bin\Debug\ProjetoPOOB.pdb
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe.config
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\bin\Debug\ProjetoPOOB.pdb
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.AssemblyReference.cache
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Form1.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.frmCadCliente.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Properties.Resources.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.GenerateResource.cache
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.CoreCompileInputs.cache
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.exe
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.pdb

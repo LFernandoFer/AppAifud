@@ -16,5 +16,11 @@ namespace ProjetoPOOB
         {
             InitializeComponent();
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadCliente frm = new frmCadCliente();
+            frm.ShowDialog();
+        }
     }
 }
