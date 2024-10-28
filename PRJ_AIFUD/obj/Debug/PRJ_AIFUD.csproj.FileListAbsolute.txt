@@ -26,3 +26,4 @@ E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.Core
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.exe
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.pdb
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Home.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.frmCadProduto.resources

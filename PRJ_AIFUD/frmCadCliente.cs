@@ -22,7 +22,8 @@ namespace ProjetoPOOB
             cliente.Endereco = txtEndereco.Text;
             cliente.DtNascimento = Convert.ToDateTime(txtDtNascimento.Text);
 
-            controler.Inserir(cliente);
+            MessageBox.Show("Cliente nº " + controler.Inserir(cliente)
+                + "cadastrado com sucesso");
 
         }
 
