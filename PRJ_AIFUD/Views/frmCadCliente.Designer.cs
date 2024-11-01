@@ -39,7 +39,7 @@
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDtNascimento = new System.Windows.Forms.TextBox();
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +86,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(375, 179);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(308, 30);
-            this.txtEndereco.TabIndex = 7;
+            this.txtEndereco.TabIndex = 4;
             // 
             // label4
             // 
@@ -105,7 +105,8 @@
             this.mskCPF.Mask = "000,000,000-00";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(205, 38);
-            this.mskCPF.TabIndex = 8;
+            this.mskCPF.TabIndex = 2;
+            this.mskCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // mskTelefone
             // 
@@ -114,15 +115,15 @@
             this.mskTelefone.Mask = "(99) 00000-0000";
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(209, 38);
-            this.mskTelefone.TabIndex = 9;
+            this.mskTelefone.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button1.Location = new System.Drawing.Point(417, 250);
+            this.button1.Location = new System.Drawing.Point(483, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 49);
-            this.button1.TabIndex = 10;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -137,20 +138,22 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Data de Nascimento";
             // 
-            // txtDtNascimento
+            // dtpNascimento
             // 
-            this.txtDtNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtDtNascimento.Location = new System.Drawing.Point(29, 267);
-            this.txtDtNascimento.Name = "txtDtNascimento";
-            this.txtDtNascimento.Size = new System.Drawing.Size(165, 30);
-            this.txtDtNascimento.TabIndex = 12;
+            this.dtpNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNascimento.Location = new System.Drawing.Point(29, 277);
+            this.dtpNascimento.Name = "dtpNascimento";
+            this.dtpNascimento.Size = new System.Drawing.Size(175, 38);
+            this.dtpNascimento.TabIndex = 5;
+            this.dtpNascimento.Value = new System.DateTime(2024, 10, 31, 0, 0, 0, 0);
             // 
             // frmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 311);
-            this.Controls.Add(this.txtDtNascimento);
+            this.ClientSize = new System.Drawing.Size(697, 331);
+            this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.mskTelefone);
@@ -182,6 +185,6 @@
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDtNascimento;
+        private System.Windows.Forms.DateTimePicker dtpNascimento;
     }
 }

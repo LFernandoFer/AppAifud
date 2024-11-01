@@ -16,7 +16,7 @@ namespace ProjetoPOOB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadProduto());
+            Application.Run(new Home());
         }
     }
 }

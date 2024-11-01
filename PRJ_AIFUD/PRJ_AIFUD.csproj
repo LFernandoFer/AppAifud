@@ -47,23 +47,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ProdutosController.cs" />
-    <Compile Include="frmCadCliente.cs">
+    <Compile Include="Views\frmCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadCliente.Designer.cs">
+    <Compile Include="Views\frmCadCliente.Designer.cs">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="frmCadProduto.cs">
+    <Compile Include="Views\frmCadProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadProduto.Designer.cs">
+    <Compile Include="Views\frmCadProduto.Designer.cs">
       <DependentUpon>frmCadProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="Views\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Views\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
@@ -77,13 +77,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DataBaseSqlServerService.cs" />
-    <EmbeddedResource Include="frmCadProduto.resx">
+    <EmbeddedResource Include="Views\frmCadProduto.resx">
       <DependentUpon>frmCadProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="Views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadCliente.resx">
+    <EmbeddedResource Include="Views\frmCadCliente.resx">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -111,7 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Imagens\" />
-    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,7 +23,7 @@ namespace ProjetoPOOB
             frm.ShowDialog();
         }
 
-        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmCadProduto frm = new frmCadProduto();
             frm.ShowDialog();

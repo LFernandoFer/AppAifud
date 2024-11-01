@@ -93,6 +93,7 @@
             this.mskPreco.Name = "mskPreco";
             this.mskPreco.Size = new System.Drawing.Size(111, 38);
             this.mskPreco.TabIndex = 2;
+            this.mskPreco.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // btnSalvar
             // 

@@ -18,30 +18,14 @@ namespace ProjetoPOOB
             Cliente cliente = new Cliente();
             cliente.Nome = txtNome.Text;
             cliente.Telefone = mskTelefone.Text.ToString();
-            cliente.CPF = ConverterCPF(mskCPF.Text);
+            cliente.CPF = mskCPF.Text;
             cliente.Endereco = txtEndereco.Text;
-            cliente.DtNascimento = Convert.ToDateTime(txtDtNascimento.Text);
+            cliente.DtNascimento = Convert.ToDateTime(dtpNascimento.Text);
 
             MessageBox.Show("Cliente nº " + controler.Inserir(cliente)
-                + "cadastrado com sucesso");
+                + " cadastrado com sucesso");
 
         }
 
-        public string ConverterCPF(string CPF)
-        {
-            string cpfFormatado = "";
-            int i = 0;
-                while(CPF.Length > i)
-                {
-                    if (CPF[i] != '.' && CPF[i] != '-')
-                    {
-                        cpfFormatado += Convert.ToChar(CPF[i]);
-                        i++;
-                    }
-                    else i++;
-                }
-
-         return cpfFormatado;
-        }
     }
 }
