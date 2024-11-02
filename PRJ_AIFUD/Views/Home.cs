@@ -1,4 +1,5 @@
 ﻿using System;
+using ProjetoPOOB.Views;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,12 @@ namespace ProjetoPOOB
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmCadProduto frm = new frmCadProduto();
+            frm.ShowDialog();
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClienteColecao frm = new frmClienteColecao();
             frm.ShowDialog();
         }
     }
