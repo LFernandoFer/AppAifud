@@ -77,5 +77,16 @@ namespace ProjetoPOOB.Views
         {
             Pesquisar();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            frmCadCliente frm = new frmCadCliente();
+            frm.ShowDialog();
+        }
+
+        private void frmClienteColecao_Activated(object sender, EventArgs e)
+        {
+            Pesquisar();
+        }
     }
 }

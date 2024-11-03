@@ -155,5 +155,11 @@ namespace ProjetoPOOB.Controllers
                 return null;
         }
         #endregion
+
+        public int Excluir(Cliente cliente)
+        {
+            string query =
+                "Delete from Cliente where CLI_ID =="
+        }
     }
 }
