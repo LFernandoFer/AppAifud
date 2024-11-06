@@ -19,9 +19,9 @@ namespace ProjetoPOOB.Views
         public frmClienteColecao()
         {
             InitializeComponent();
-
+            
             dgvClientes.AutoGenerateColumns = false;
-        }
+         }
 
         private void Pesquisar()
         {
@@ -88,5 +88,82 @@ namespace ProjetoPOOB.Views
         {
             Pesquisar();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
+
+            DialogResult resultado = MessageBox.Show(
+                "Deseja realmente excluir o registro selecionado?",
+                "Importante",
+                MessageBoxButtons.OKCancel);
+
+            if (resultado == DialogResult.OK)
+            {
+                Cliente clienteSelecionado = RecuperarCliente();
+
+                if (clienteSelecionado != null)
+                {
+                    if (MessageBox.Show(
+                        "Deseja realmente excluir o registro?",
+                        "Confirmação", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+
+
+                        ClienteController clienteController = new ClienteController();
+
+                        if (clienteController.Excluir(clienteSelecionado.IdCliente) > 0)
+                        {
+                            MessageBox.Show("Registro excluído com sucesso.",
+                                "Informação", MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+
+                            Pesquisar();
+                        }
+                        else
+                            MessageBox.Show("Não foi possível excluir o regsitro.",
+                                "Atenção", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                    }
+                }
+            }
+        }
+
+        private Cliente RecuperarCliente()
+        {
+            if (dgvClientes.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum registro selecionado.",
+                    "Informação", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return null;
+            }
+            else
+            {
+                //Este método recupera o objeto da linha 
+                //selecionada na Grade
+                return dgvClientes.SelectedRows[0].DataBoundItem
+                as Cliente;
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+          ClienteController controller = new ClienteController();
+            Cliente clienteSelecionado = 
+                controller.ConsultarPorId(
+                    Convert.ToInt32(dgvClientes.SelectedRows[0].
+                    Cells["IdCliente"].Value));
+
+            frmCadCliente frm = new frmCadCliente(clienteSelecionado);
+            frm.ShowDialog();
+
+        }
+
     }
 }

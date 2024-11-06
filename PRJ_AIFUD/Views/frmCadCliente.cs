@@ -11,6 +11,18 @@ namespace ProjetoPOOB
         {
             InitializeComponent();
         }
+
+        public frmCadCliente(Cliente cliente)
+        {
+            InitializeComponent();
+
+            txtNome.Text = cliente.Nome;
+            txtEndereco.Text = cliente.Endereco;
+            mskCPF.Text = cliente.CPF;
+            dtpNascimento.Value = cliente.DtNascimento;
+            mskTelefone.Text = cliente.Telefone;
+
+        }
         ClienteController controler = new ClienteController();
 
         private void button1_Click(object sender, EventArgs e)

@@ -156,10 +156,17 @@ namespace ProjetoPOOB.Controllers
         }
         #endregion
 
-        public int Excluir(Cliente cliente)
+        public int Excluir(int IdCliente)
         {
+            
             string query =
-                "Delete from Cliente where CLI_ID =="
+                "Delete from Cliente where CLI_ID = @CLI_Id";
+
+            dataBase.LimparParametros();
+            dataBase.AdicionarParametros("@CLI_Id", IdCliente);
+
+            return dataBase.ExecutarManipulacao(
+               CommandType.Text, query);
         }
     }
 }
