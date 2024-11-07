@@ -35,5 +35,11 @@ namespace ProjetoPOOB
             frmClienteColecao frm = new frmClienteColecao();
             frm.ShowDialog();
         }
+
+        private void cadastrarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmCadFuncionarioView frm = new frmCadFuncionarioView();
+            frm.ShowDialog();
+        }
     }
 }
