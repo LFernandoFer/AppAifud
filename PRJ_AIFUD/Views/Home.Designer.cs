@@ -41,6 +41,7 @@
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,14 +77,14 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.clienteToolStripMenuItem.Text = "Cadastrar";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // produtoToolStripMenuItem
             // 
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.produtoToolStripMenuItem.Text = "Consultar";
             this.produtoToolStripMenuItem.Click += new System.EventHandler(this.produtoToolStripMenuItem_Click);
             // 
@@ -99,13 +100,14 @@
             // fazerToolStripMenuItem
             // 
             this.fazerToolStripMenuItem.Name = "fazerToolStripMenuItem";
-            this.fazerToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.fazerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fazerToolStripMenuItem.Text = "Fazer";
+            this.fazerToolStripMenuItem.Click += new System.EventHandler(this.fazerToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // produtoToolStripMenuItem1
@@ -126,7 +128,8 @@
             // funcionárioToolStripMenuItem
             // 
             this.funcionárioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem2});
+            this.cadastrarToolStripMenuItem2,
+            this.consultarToolStripMenuItem1});
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
             this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
@@ -134,9 +137,16 @@
             // cadastrarToolStripMenuItem2
             // 
             this.cadastrarToolStripMenuItem2.Name = "cadastrarToolStripMenuItem2";
-            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(125, 22);
             this.cadastrarToolStripMenuItem2.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem2.Click += new System.EventHandler(this.cadastrarToolStripMenuItem2_Click);
+            // 
+            // consultarToolStripMenuItem1
+            // 
+            this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+            this.consultarToolStripMenuItem1.Text = "Consultar";
+            this.consultarToolStripMenuItem1.Click += new System.EventHandler(this.consultarToolStripMenuItem1_Click);
             // 
             // Home
             // 
@@ -170,6 +180,7 @@
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem funcionárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem1;
     }
 }
 

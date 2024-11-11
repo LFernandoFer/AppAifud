@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoPOOB.Controllers
 {
+    
     public class FuncionariosController
     {
         //Criar instancia global para acessar a classe DataBase
@@ -53,6 +54,7 @@ namespace ProjetoPOOB.Controllers
             return Convert.ToInt32(dataBase.ExecutarConsultaScalar(
                 CommandType.Text, "SELECT MAX(CLI_ID) FROM cliente"));
         }
+        #region
         public int Alterar(Funcionarios funcionario)
         {
             string queryAlterar =
@@ -74,18 +76,19 @@ namespace ProjetoPOOB.Controllers
             dataBase.AdicionarParametros("@Telefone", funcionario.Telefone);
             dataBase.AdicionarParametros("@Funcao", funcionario.Funcao);
             dataBase.AdicionarParametros("@Turno", funcionario.Turno);
-            dataBase.AdicionarParametros("@FuncId", funcionario.IdCliente);
+            dataBase.AdicionarParametros("@FuncId", funcionario.Id);
 
             return dataBase.ExecutarManipulacao(
                 CommandType.Text, queryAlterar);
         }
+        #endregion
         #region ConsultarPorNome
-        public ClienteCollection ConsultarPorNome(string nome)
+        public FuncionarioCollections ConsultarPorNome(string nome)
         {
-            ClienteCollection clienteColecao = new ClienteCollection();
+            FuncionarioCollections funcionariosColecao = new FuncionarioCollections();
             string query =
-                "SELECT * FROM CLIENTE " +
-                "WHERE CLI_NOME LIKE '%' + @Nome + '%'";
+                "SELECT * FROM FUNCIONARIO " +
+                "WHERE FUNC_NOME LIKE '%' + @Nome + '%'";
 
             dataBase.LimparParametros();
             dataBase.AdicionarParametros("@Nome", nome.Trim());
@@ -99,81 +102,88 @@ namespace ProjetoPOOB.Controllers
 
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                Cliente cliente = new Cliente();
+                Funcionarios funcionario = new Funcionarios();
                 //Agora vou indetificar o valor da linha na coluna
                 //e atribuir ao objeto
                 //Todo dado precisa ser convertido
                 //do SQL Server para C#
-                cliente.IdCliente = Convert.ToInt32(dataRow["CLI_ID"]);
-                cliente.Nome = Convert.ToString(dataRow["CLI_NOME"]);
-                cliente.CPF = Convert.ToString(dataRow["CLI_CPF"]);
-                cliente.Endereco = Convert.ToString(dataRow["CLI_ENDERECO"]);
+                funcionario.Id = Convert.ToInt32(dataRow["FUNC_ID"]);
+                funcionario.Nome = Convert.ToString(dataRow["FUNC_NOME"]);
+                funcionario.CPF = Convert.ToString(dataRow["FUNC_CPF"]);
+                funcionario.Endereco = Convert.ToString(dataRow["FUNC_ENDERECO"]);
+                funcionario.Turno = Convert.ToString(dataRow["FUNC_TURNO"]);
+                funcionario.Funcao = Convert.ToString(dataRow["FUNC_Funcao"]);
+
                 //Somente irei popular o atributo DtNascimento
                 //Se o valor no banco de dados 
                 //não estiver NULL
-                if (!(dataRow["CLI_DataNascimento"] is DBNull))
-                    cliente.DtNascimento =
-                        Convert.ToDateTime(dataRow["CLI_DataNascimento"]);
-                cliente.Telefone = Convert.ToString(dataRow["CLI_TELEFONE"]);
+                if (!(dataRow["FUNC_DataNascimento"] is DBNull))
+                    funcionario.DtNascimento =
+                        Convert.ToDateTime(dataRow["FUNC_DataNascimento"]);
+                funcionario.Telefone = Convert.ToString(dataRow["FUNC_TELEFONE"]);
 
                 //Adicione o objeto cliente na Coleção de Clientes
                 //Ou seja cada linha retorna será um objeto
                 //E a Collection tera um objeto de cada linha
-                clienteColecao.Add(cliente);
+                funcionariosColecao.Add(funcionario);
             }
-            return clienteColecao;
+            return funcionariosColecao;
         }
         #endregion
 
         #region ConsultarPorId
-        public Cliente ConsultarPorId(int IdCliente)
+        public Funcionarios ConsultarPorId(int idFuncionario)
         {
             string query =
-                "SELECT * FROM CLIENTE " +
-                "WHERE CLI_ID = @IdCliente";
+                "SELECT * FROM FUNCIONARIO " +
+                "WHERE FUNC_ID = @Id";
 
             dataBase.LimparParametros();
-            dataBase.AdicionarParametros("@IdCliente", IdCliente);
+            dataBase.AdicionarParametros("@Id", idFuncionario);
 
             DataTable dataTable = dataBase.ExecutarConsulta(
                 CommandType.Text, query);
 
             if (dataTable.Rows.Count > 0)
             {
-                Cliente cliente = new Cliente();
+                Funcionarios funcionario = new Funcionarios();
                 //Agora vou indetificar o valor da linha na coluna
                 //e atribuir ao objeto
                 //Todo dado precisa ser convertido
                 //do SQL Server para C#
-                cliente.IdCliente = Convert.ToInt32(dataTable.Rows[0]["CLI_ID"]);
-                cliente.Nome = Convert.ToString(dataTable.Rows[0]["CLI_NOME"]);
-                cliente.CPF = Convert.ToString(dataTable.Rows[0]["CLI_CPF"]);
+                funcionario.Id = Convert.ToInt32(dataTable.Rows[0]["FUNC_ID"]);
+                funcionario.Nome = Convert.ToString(dataTable.Rows[0]["FUNC_NOME"]);
+                funcionario.CPF = Convert.ToString(dataTable.Rows[0]["FUNC_CPF"]);
+                funcionario.Endereco = Convert.ToString(dataTable.Rows[0]["FUNC_ENDERECO"]);
+                funcionario.Turno = Convert.ToString(dataTable.Rows[0]["FUNC_TURNO"]);
+                funcionario.Funcao = Convert.ToString(dataTable.Rows[0]["FUNC_Funcao"]);
+
                 //Somente irei popular o atributo DtNascimento
                 //Se o valor no banco de dados 
                 //não estiver NULL
-                if (!(dataTable.Rows[0]["CLI_DataNascimento"] is DBNull))
-                    cliente.DtNascimento =
-                        Convert.ToDateTime(dataTable.Rows[0]["CLI_DataNascimento"]);
-                cliente.Telefone = Convert.ToString(dataTable.Rows[0]["CLI_TELEFONE"]);
+                if (!(dataTable.Rows[0]["FUNC_DataNascimento"] is DBNull))
+                    funcionario.DtNascimento =
+                        Convert.ToDateTime(dataTable.Rows[0]["FUNC_DataNascimento"]);
+                funcionario.Telefone = Convert.ToString(dataTable.Rows[0]["FUNC_TELEFONE"]);
 
-                //Adicione o objeto cliente na Coleção de Clientes
+                //Adicione o objetFUNCliente na Coleção de Clientes
                 //Ou seja cada linha retorna será um objeto
                 //E a Collection tera um objeto de cada linha
-                return cliente;
+                return funcionario;
             }
             else
                 return null;
         }
         #endregion
 
-        public int Excluir(int IdCliente)
+        public int Excluir(int Id)
         {
 
             string query =
-                "Delete from Cliente where CLI_ID = @CLI_Id";
+                "Delete from FUNCIONARIO where FUNC_ID = @FUNC_Id";
 
             dataBase.LimparParametros();
-            dataBase.AdicionarParametros("@CLI_Id", IdCliente);
+            dataBase.AdicionarParametros("@FUNC_Id", Id);
 
             return dataBase.ExecutarManipulacao(
                CommandType.Text, query);

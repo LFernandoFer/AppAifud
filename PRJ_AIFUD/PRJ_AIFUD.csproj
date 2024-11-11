@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
+    <Compile Include="Models\FuncionarioCollections.cs" />
     <Compile Include="Models\Funcionarios.cs" />
     <Compile Include="Views\frmCadCliente.cs">
       <SubType>Form</SubType>
@@ -73,6 +74,18 @@
     </Compile>
     <Compile Include="Views\frmClienteColecao.Designer.cs">
       <DependentUpon>frmClienteColecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmFuncionarioColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmFuncionarioColecao.Designer.cs">
+      <DependentUpon>frmFuncionarioColecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmPedidoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmPedidoView.Designer.cs">
+      <DependentUpon>frmPedidoView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.cs">
       <SubType>Form</SubType>
@@ -100,6 +113,12 @@
     <EmbeddedResource Include="Views\frmClienteColecao.resx">
       <DependentUpon>frmClienteColecao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmFuncionarioColecao.resx">
+      <DependentUpon>frmFuncionarioColecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmPedidoView.resx">
+      <DependentUpon>frmPedidoView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +136,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\ProjetoPOOB.Models.ClienteCollection.datasource" />
+    <None Include="Properties\DataSources\ProjetoPOOB.Models.FuncionarioCollections.datasource" />
+    <None Include="Properties\DataSources\ProjetoPOOB.Models.PedidoCollection.datasource" />
+    <None Include="Properties\DataSources\ProjetoPOOB.Models.ProdutoCollection.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

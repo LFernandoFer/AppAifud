@@ -117,7 +117,7 @@ namespace ProjetoPOOB.Views
 
                         ClienteController clienteController = new ClienteController();
 
-                        if (clienteController.Excluir(clienteSelecionado.IdCliente) > 0)
+                        if (clienteController.Excluir(clienteSelecionado.Id) > 0)
                         {
                             MessageBox.Show("Registro excluído com sucesso.",
                                 "Informação", MessageBoxButtons.OK,
@@ -136,7 +136,7 @@ namespace ProjetoPOOB.Views
 
         private Cliente RecuperarCliente()
         {
-            if (dgvClientes.SelectedRows.Count == 0)
+            if (dgvClientes.SelectedRows.Count != 0)
             {
                 MessageBox.Show("Nenhum registro selecionado.",
                     "Informação", MessageBoxButtons.OK,
@@ -158,7 +158,7 @@ namespace ProjetoPOOB.Views
             Cliente clienteSelecionado = 
                 controller.ConsultarPorId(
                     Convert.ToInt32(dgvClientes.SelectedRows[0].
-                    Cells["IdCliente"].Value));
+                    Cells["Id"].Value));
 
             frmCadCliente frm = new frmCadCliente(clienteSelecionado);
             frm.ShowDialog();

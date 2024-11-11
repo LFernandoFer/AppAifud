@@ -17,7 +17,17 @@ namespace ProjetoPOOB.Views
         {
             InitializeComponent();
         }
-     
+        
+        public frmCadFuncionarioView(Funcionarios funcionario)
+        {
+            funcionario.Nome = txtNome.Text;
+            funcionario.CPF = mskCPF.Text;
+            funcionario.Endereco = txtEndereco.Text;
+            funcionario.DtNascimento = Convert.ToDateTime(dtpNascimento.Text);
+            funcionario.Telefone = mskTelefone.Text;
+            funcionario.Turno = txtTurno.Text;
+            funcionario.Funcao = txtFuncao.Text;
+        }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Funcionarios funcionario = new Funcionarios();

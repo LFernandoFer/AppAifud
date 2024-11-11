@@ -11,9 +11,9 @@ CLI_ENDERECO VARCHAR (100),
 CLI_TELEFONE VARCHAR (20)
 );
 
-select * from cliente;
+--select * from cliente;
 
-drop table FUNCIONÁRIO;
+--drop table FUNCIONÁRIO;
 
 CREATE TABLE FUNCIONARIO (
 FUNC_ID INT NOT NULL PRIMARY KEY IDENTITY,

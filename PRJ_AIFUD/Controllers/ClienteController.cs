@@ -64,7 +64,7 @@ namespace ProjetoPOOB.Controllers
             dataBase.AdicionarParametros("@DataNascimento", cliente.DtNascimento);
             dataBase.AdicionarParametros("@Endereco", cliente.Endereco);
             dataBase.AdicionarParametros("@Telefone", cliente.Telefone);
-            dataBase.AdicionarParametros("@IdCliente", cliente.IdCliente);
+            dataBase.AdicionarParametros("@IdCliente", cliente.Id);
 
             return dataBase.ExecutarManipulacao(
                 CommandType.Text, queryAlterar);
@@ -94,7 +94,7 @@ namespace ProjetoPOOB.Controllers
                 //e atribuir ao objeto
                 //Todo dado precisa ser convertido
                 //do SQL Server para C#
-                cliente.IdCliente = Convert.ToInt32(dataRow["CLI_ID"]);
+                cliente.Id = Convert.ToInt32(dataRow["CLI_ID"]);
                 cliente.Nome = Convert.ToString(dataRow["CLI_NOME"]);
                 cliente.CPF = Convert.ToString(dataRow["CLI_CPF"]);
                 cliente.Endereco = Convert.ToString(dataRow["CLI_ENDERECO"]);
@@ -135,7 +135,7 @@ namespace ProjetoPOOB.Controllers
                 //e atribuir ao objeto
                 //Todo dado precisa ser convertido
                 //do SQL Server para C#
-                cliente.IdCliente = Convert.ToInt32(dataTable.Rows[0]["CLI_ID"]);
+                cliente.Id = Convert.ToInt32(dataTable.Rows[0]["CLI_ID"]);
                 cliente.Nome = Convert.ToString(dataTable.Rows[0]["CLI_NOME"]);
                 cliente.CPF = Convert.ToString(dataTable.Rows[0]["CLI_CPF"]);
                 //Somente irei popular o atributo DtNascimento
@@ -145,7 +145,7 @@ namespace ProjetoPOOB.Controllers
                     cliente.DtNascimento =
                         Convert.ToDateTime(dataTable.Rows[0]["CLI_DataNascimento"]);
                 cliente.Telefone = Convert.ToString(dataTable.Rows[0]["CLI_TELEFONE"]);
-
+                cliente.Endereco = Convert.ToString(dataTable.Rows[0]["CLI_ENDERECO"]);
                 //Adicione o objeto cliente na Coleção de Clientes
                 //Ou seja cada linha retorna será um objeto
                 //E a Collection tera um objeto de cada linha

@@ -41,5 +41,17 @@ namespace ProjetoPOOB
             frmCadFuncionarioView frm = new frmCadFuncionarioView();
             frm.ShowDialog();
         }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmFuncionarioColecao frm = new frmFuncionarioColecao();
+            frm.ShowDialog();
+        }
+
+        private void fazerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPedidoView frm = new frmPedidoView();
+            frm.ShowDialog();
+        }
     }
 }
