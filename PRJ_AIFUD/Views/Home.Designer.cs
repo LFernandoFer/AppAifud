@@ -105,15 +105,16 @@
             // fazerToolStripMenuItem
             // 
             this.fazerToolStripMenuItem.Name = "fazerToolStripMenuItem";
-            this.fazerToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.fazerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fazerToolStripMenuItem.Text = "Fazer";
             this.fazerToolStripMenuItem.Click += new System.EventHandler(this.fazerToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // produtoToolStripMenuItem1
             // 

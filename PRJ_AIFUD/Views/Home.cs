@@ -71,5 +71,11 @@ namespace ProjetoPOOB
             frmFornecedorColecao frm = new frmFornecedorColecao();
             frm.ShowDialog();
         }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarPedidoView frm = new frmConsultarPedidoView();
+            frm.ShowDialog();
+        }
     }
 }

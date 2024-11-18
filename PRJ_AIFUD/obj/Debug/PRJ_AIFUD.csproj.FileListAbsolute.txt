@@ -48,3 +48,4 @@ E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frm
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmCadFornecedorView.resources
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmEstoqueView.resources
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmFornecedorColecao.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmConsultarPedidoView.resources
