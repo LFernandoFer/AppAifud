@@ -108,7 +108,7 @@ namespace ProjetoPOOB.Controllers
 
                 //Adicione o objeto cliente na Coleção de Clientes
                 //Ou seja cada linha retorna será um objeto
-                //E a Collection tera um objeto de cada linha
+                //E a Collection te²ra um objeto de cada linha
                 clienteColecao.Add(cliente);
             }
             return clienteColecao;

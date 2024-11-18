@@ -126,9 +126,11 @@ namespace ProjetoPOOB.Views
                             Pesquisar();
                         }
                         else
+                        {
                             MessageBox.Show("Não foi possível excluir o regsitro.",
                                 "Atenção", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }

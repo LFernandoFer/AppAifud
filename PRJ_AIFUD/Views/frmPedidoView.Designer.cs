@@ -34,15 +34,15 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pedidoCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.produtoCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtoCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pedidoCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Adicionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoCollectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoCollectionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoCollectionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +74,7 @@
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(12, 47);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(121, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(252, 21);
             this.cmbCliente.TabIndex = 1;
             // 
             // dataGridView1
@@ -91,14 +91,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(344, 150);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // pedidoCollectionBindingSource
-            // 
-            this.pedidoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.PedidoCollection);
-            // 
-            // produtoCollectionBindingSource
-            // 
-            this.produtoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.ProdutoCollection);
             // 
             // nomeProdutoDataGridViewTextBoxColumn
             // 
@@ -117,6 +109,14 @@
             this.precoVendaDataGridViewTextBoxColumn.DataPropertyName = "PrecoVenda";
             this.precoVendaDataGridViewTextBoxColumn.HeaderText = "Preco";
             this.precoVendaDataGridViewTextBoxColumn.Name = "precoVendaDataGridViewTextBoxColumn";
+            // 
+            // produtoCollectionBindingSource
+            // 
+            this.produtoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.ProdutoCollection);
+            // 
+            // pedidoCollectionBindingSource
+            // 
+            this.pedidoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.PedidoCollection);
             // 
             // Adicionar
             // 
@@ -142,8 +142,8 @@
             this.Text = "frmPedidoView";
             this.Load += new System.EventHandler(this.frmPedidoView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoCollectionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoCollectionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoCollectionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -26,9 +26,17 @@ namespace ProjetoPOOB
 
             produto.NomeProduto = txtNomeProd.Text;
             produto.Descricao = txtDescricao.Text;
-            produto.PrecoVenda = Convert.ToInt32(mskPreco.Text);
+            produto.UnMedida = txtUnMedida.Text;
+            produto.PrecoVenda = Convert.ToDecimal(mskPreco.Text);
+            produto.EstoqueAtual = Convert.ToInt32(mskEstoque.Text);
 
             MessageBox.Show("Poduto nº" + controler.Inserir(produto));
+            
+            txtDescricao.Clear();
+            txtNomeProd.Clear();
+            txtUnMedida.Clear();
+            mskPreco.Clear();
+            mskEstoque.Clear();
         }
     }
 }

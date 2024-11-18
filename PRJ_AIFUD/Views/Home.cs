@@ -53,5 +53,23 @@ namespace ProjetoPOOB
             frmPedidoView frm = new frmPedidoView();
             frm.ShowDialog();
         }
+
+        private void cadastrarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmCadFornecedorView frm = new frmCadFornecedorView();
+            frm.ShowDialog();
+        }
+
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstoqueView frm = new frmEstoqueView();
+            frm.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmFornecedorColecao frm = new frmFornecedorColecao();
+            frm.ShowDialog();
+        }
     }
 }

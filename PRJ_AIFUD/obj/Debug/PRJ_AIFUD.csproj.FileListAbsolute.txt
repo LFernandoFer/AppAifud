@@ -45,3 +45,6 @@ C:\Users\unifafibe.UNIDC_ACD\Documents\GitHub\AppAifud\PRJ_AIFUD\obj\Debug\Proje
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmCadFuncionarioView.resources
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmFuncionarioColecao.resources
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmPedidoView.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmCadFornecedorView.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmEstoqueView.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmFornecedorColecao.resources

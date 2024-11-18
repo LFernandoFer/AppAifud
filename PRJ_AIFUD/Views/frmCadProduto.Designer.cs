@@ -36,6 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.mskPreco = new System.Windows.Forms.MaskedTextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.mskEstoque = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUnMedida = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -98,7 +102,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.btnSalvar.Location = new System.Drawing.Point(160, 385);
+            this.btnSalvar.Location = new System.Drawing.Point(298, 395);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(104, 43);
             this.btnSalvar.TabIndex = 4;
@@ -106,11 +110,56 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label4.Location = new System.Drawing.Point(448, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 31);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Estoque";
+            // 
+            // mskEstoque
+            // 
+            this.mskEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.mskEstoque.HidePromptOnLeave = true;
+            this.mskEstoque.Location = new System.Drawing.Point(454, 94);
+            this.mskEstoque.Mask = "0000000";
+            this.mskEstoque.Name = "mskEstoque";
+            this.mskEstoque.PromptChar = ' ';
+            this.mskEstoque.Size = new System.Drawing.Size(111, 38);
+            this.mskEstoque.TabIndex = 6;
+            this.mskEstoque.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mskEstoque.ValidatingType = typeof(int);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label5.Location = new System.Drawing.Point(448, 154);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 31);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Un. Medida";
+            // 
+            // txtUnMedida
+            // 
+            this.txtUnMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.txtUnMedida.Location = new System.Drawing.Point(454, 211);
+            this.txtUnMedida.Name = "txtUnMedida";
+            this.txtUnMedida.Size = new System.Drawing.Size(146, 38);
+            this.txtUnMedida.TabIndex = 8;
+            // 
             // frmCadProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 450);
+            this.ClientSize = new System.Drawing.Size(717, 450);
+            this.Controls.Add(this.txtUnMedida);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.mskEstoque);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.mskPreco);
             this.Controls.Add(this.txtDescricao);
@@ -135,5 +184,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox mskPreco;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox mskEstoque;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtUnMedida;
     }
 }

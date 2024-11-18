@@ -7,7 +7,7 @@ namespace ProjetoPOOB.Models
         public int IdPedido { get; set; }
         public DateTime DtHora { get; set; }
         public Cliente Cliente { get; set; }
-        public Char Status { get; set; }
+        public char Status { get; set; }
         public string StatusTratado
         {
             get

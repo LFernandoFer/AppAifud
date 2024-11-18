@@ -22,9 +22,9 @@ namespace ProjetoPOOB.Controllers
             //O "@" indica para o SQL a utilização de 
             //parametros
             string queryInserir =
-                "INSERT INTO produto (PROD_NOME, PROD_DESCRICAO, " +
-                "PROD_PRECO) VALUES (@Nome, " +
-                " @Descricao, @Preco)";
+                "INSERT INTO PRODUTO (PROD_NOME, PROD_DESCRICAO, " +
+                "PROD_PRECO, PROD_QUANTIDADE, PROD_UNIMED) VALUES (@Nome, " +
+                " @Descricao, @Preco, @Estoque, @UnMed)";
 
             //Limpar qualquer sujeiro do objeto que armezana
             //os parametros
@@ -34,6 +34,8 @@ namespace ProjetoPOOB.Controllers
             dataBase.AdicionarParametros("@Nome", produto.NomeProduto);
             dataBase.AdicionarParametros("@Descricao", produto.Descricao);
             dataBase.AdicionarParametros("@Preco", produto.PrecoVenda);
+            dataBase.AdicionarParametros("@Estoque",produto.EstoqueAtual);
+            dataBase.AdicionarParametros("@UnMed", produto.UnMedida);
 
             //Solicita a camada de banco de dados a execução da query
             dataBase.ExecutarManipulacao(CommandType.Text, queryInserir);
@@ -44,6 +46,29 @@ namespace ProjetoPOOB.Controllers
             //SELECT MAX(id_cliente) FROM cliente
             return Convert.ToInt32(dataBase.ExecutarConsultaScalar(
                 CommandType.Text, "SELECT MAX(PROD_ID) FROM produto"));
+        }
+
+        public int Alterar(Produto produto)
+        {
+            string queryAlterar = "UPDATE PRODUTO SET" +
+                 "PROD_NOME = @Nome" +
+                 "PROD_DESCRICAO = @DESCRICAO" +
+                 "PROD_PRECO = @PRECO" +
+                 "PROD_QUANTIDADE = @ESTOQUE" +
+                 "PROD_UNIMED = @UNMED" +
+                 "WHERE PROD_ID = @IdProduto";
+
+            DataBaseSqlServerService dataBase = new DataBaseSqlServerService();
+
+            dataBase.LimparParametros();
+
+            dataBase.AdicionarParametros("@NOME", produto.NomeProduto);
+            dataBase.AdicionarParametros("@DESCRICAO", produto.Descricao);
+            dataBase.AdicionarParametros("@PRECO", produto.PrecoVenda);
+            dataBase.AdicionarParametros("@ESTOQUE", produto.EstoqueAtual);
+            dataBase.AdicionarParametros("@UNMED", produto.UnMedida);
+
+            return 0;
         }
     }
 }
