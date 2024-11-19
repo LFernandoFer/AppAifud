@@ -50,7 +50,7 @@
             // dgvClientes
             // 
             this.dgvClientes.AutoGenerateColumns = false;
-            this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -60,11 +60,11 @@
             this.telefoneDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn});
             this.dgvClientes.DataSource = this.clienteCollectionBindingSource;
-            this.dgvClientes.Location = new System.Drawing.Point(25, 73);
+            this.dgvClientes.Location = new System.Drawing.Point(-1, 50);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(645, 223);
+            this.dgvClientes.Size = new System.Drawing.Size(645, 306);
             this.dgvClientes.TabIndex = 0;
             // 
             // Id
@@ -110,7 +110,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 9);
+            this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 1;
@@ -118,14 +118,14 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(25, 26);
+            this.txtPesquisa.Location = new System.Drawing.Point(15, 24);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(198, 20);
             this.txtPesquisa.TabIndex = 1;
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(240, 26);
+            this.btnPesquisar.Location = new System.Drawing.Point(241, 22);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 2;
@@ -135,7 +135,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(331, 26);
+            this.btnCadastrar.Location = new System.Drawing.Point(343, 23);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 3;
@@ -145,7 +145,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(425, 26);
+            this.btnExcluir.Location = new System.Drawing.Point(440, 23);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 4;
@@ -155,7 +155,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(518, 26);
+            this.btnAlterar.Location = new System.Drawing.Point(538, 23);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
             this.btnAlterar.TabIndex = 5;
@@ -167,7 +167,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 323);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(643, 353);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCadastrar);

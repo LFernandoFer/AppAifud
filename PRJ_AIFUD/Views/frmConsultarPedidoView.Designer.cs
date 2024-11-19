@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pedidoCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtHoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusTratadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedidoCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -55,14 +55,10 @@
             this.statusDataGridViewTextBoxColumn,
             this.statusTratadoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.pedidoCollectionBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(117, 103);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(542, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 421);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // pedidoCollectionBindingSource
-            // 
-            this.pedidoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.PedidoCollection);
             // 
             // idPedidoDataGridViewTextBoxColumn
             // 
@@ -95,23 +91,27 @@
             this.statusTratadoDataGridViewTextBoxColumn.Name = "statusTratadoDataGridViewTextBoxColumn";
             this.statusTratadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // pedidoCollectionBindingSource
+            // 
+            this.pedidoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.PedidoCollection);
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 111);
+            this.textBox1.Location = new System.Drawing.Point(340, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 39);
+            this.textBox2.Location = new System.Drawing.Point(3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(169, 20);
             this.textBox2.TabIndex = 2;
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(318, 39);
+            this.btnPesquisar.Location = new System.Drawing.Point(178, 2);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 3;
@@ -120,7 +120,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(117, 339);
+            this.btnAlterar.Location = new System.Drawing.Point(259, 2);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
             this.btnAlterar.TabIndex = 4;
@@ -131,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnPesquisar);

@@ -58,22 +58,22 @@
             this.telefoneDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn});
             this.dgvFuncionarios.DataSource = this.funcionarioCollectionsBindingSource;
-            this.dgvFuncionarios.Location = new System.Drawing.Point(68, 81);
+            this.dgvFuncionarios.Location = new System.Drawing.Point(1, 41);
             this.dgvFuncionarios.Name = "dgvFuncionarios";
             this.dgvFuncionarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvFuncionarios.Size = new System.Drawing.Size(543, 287);
+            this.dgvFuncionarios.Size = new System.Drawing.Size(724, 340);
             this.dgvFuncionarios.TabIndex = 0;
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(68, 29);
+            this.txtPesquisa.Location = new System.Drawing.Point(1, 12);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(224, 20);
             this.txtPesquisa.TabIndex = 1;
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(313, 26);
+            this.btnPesquisar.Location = new System.Drawing.Point(231, 12);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 2;
@@ -83,7 +83,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(406, 26);
+            this.btnCadastrar.Location = new System.Drawing.Point(312, 12);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 3;
@@ -141,6 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(725, 380);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnPesquisar);

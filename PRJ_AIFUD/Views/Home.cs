@@ -16,9 +16,16 @@ namespace ProjetoPOOB
         public Home()
         {
             InitializeComponent();
+            AtualizaDataHora();
         }
 
-        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        public void AtualizaDataHora()
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblData.Text = DateTime.Now.ToLongDateString();
+        }
+
+           private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadCliente frm = new frmCadCliente();
             frm.ShowDialog();
@@ -76,6 +83,16 @@ namespace ProjetoPOOB
         {
             frmConsultarPedidoView frm = new frmConsultarPedidoView();
             frm.ShowDialog();
+        }
+
+        private void lblHora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            AtualizaDataHora();
         }
     }
 }

@@ -48,7 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(435, 29);
+            this.label1.Location = new System.Drawing.Point(381, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(438, 48);
+            this.textBox1.Location = new System.Drawing.Point(422, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
@@ -64,15 +64,15 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 105);
+            this.listBox1.Location = new System.Drawing.Point(12, 39);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(195, 316);
+            this.listBox1.Size = new System.Drawing.Size(333, 407);
             this.listBox1.TabIndex = 2;
             // 
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(12, 47);
+            this.cmbCliente.Location = new System.Drawing.Point(12, 12);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(252, 21);
             this.cmbCliente.TabIndex = 1;
@@ -86,10 +86,10 @@
             this.descricaoDataGridViewTextBoxColumn,
             this.precoVendaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.produtoCollectionBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(379, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(351, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(451, 415);
             this.dataGridView1.TabIndex = 3;
             // 
             // nomeProdutoDataGridViewTextBoxColumn
@@ -120,7 +120,7 @@
             // 
             // Adicionar
             // 
-            this.Adicionar.Location = new System.Drawing.Point(270, 46);
+            this.Adicionar.Location = new System.Drawing.Point(270, 12);
             this.Adicionar.Name = "Adicionar";
             this.Adicionar.Size = new System.Drawing.Size(75, 23);
             this.Adicionar.TabIndex = 4;
@@ -131,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Adicionar);
             this.Controls.Add(this.dataGridView1);

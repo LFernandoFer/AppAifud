@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvProduto = new System.Windows.Forms.DataGridView();
-            this.produtoCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estoqueAtualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtoCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoCollectionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -54,15 +54,11 @@
             this.descricaoDataGridViewTextBoxColumn,
             this.precoVendaDataGridViewTextBoxColumn});
             this.dgvProduto.DataSource = this.produtoCollectionBindingSource;
-            this.dgvProduto.Location = new System.Drawing.Point(55, 127);
+            this.dgvProduto.Location = new System.Drawing.Point(0, 1);
             this.dgvProduto.Name = "dgvProduto";
             this.dgvProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduto.Size = new System.Drawing.Size(644, 150);
+            this.dgvProduto.Size = new System.Drawing.Size(801, 450);
             this.dgvProduto.TabIndex = 0;
-            // 
-            // produtoCollectionBindingSource
-            // 
-            this.produtoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.ProdutoCollection);
             // 
             // idProdutoDataGridViewTextBoxColumn
             // 
@@ -100,11 +96,16 @@
             this.precoVendaDataGridViewTextBoxColumn.HeaderText = "Preco de Venda";
             this.precoVendaDataGridViewTextBoxColumn.Name = "precoVendaDataGridViewTextBoxColumn";
             // 
+            // produtoCollectionBindingSource
+            // 
+            this.produtoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.ProdutoCollection);
+            // 
             // frmEstoqueView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(798, 450);
             this.Controls.Add(this.dgvProduto);
             this.Name = "frmEstoqueView";
             this.Text = "frmEstoqueView";
