@@ -220,6 +220,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Name = "frmCadFuncionarioView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCadFuncionarioView";
             this.ResumeLayout(false);
             this.PerformLayout();

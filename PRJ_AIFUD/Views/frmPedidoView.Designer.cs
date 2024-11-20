@@ -140,6 +140,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmPedidoView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmPedidoView";
             this.Load += new System.EventHandler(this.frmPedidoView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

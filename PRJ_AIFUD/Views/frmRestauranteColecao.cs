@@ -12,32 +12,31 @@ using System.Windows.Forms;
 
 namespace ProjetoPOOB.Views
 {
-    public partial class frmFornecedorColecao : Form
+    public partial class frmRestauranteColecao : Form
     {
-        public frmFornecedorColecao()
+        public frmRestauranteColecao()
         {
             InitializeComponent();
-
             Pesquisar();
         }
         #region CarregarTela
-        private void frmFornecedorColecao_Load(object sender, EventArgs e)
+        private void frmRestauranteColecao_Load(object sender, EventArgs e)
         {
             Pesquisar();
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void frmRestauranteColecao_Activated(object sender, EventArgs e)
         {
             Pesquisar();
         }
-        private void frmFornecedorColecao_Activated(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
             Pesquisar();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            frmCadFornecedorView frm = new frmCadFornecedorView();
+            frmCadRestauranteView frm = new frmCadRestauranteView();
             frm.ShowDialog();
         }
         #endregion
@@ -45,47 +44,64 @@ namespace ProjetoPOOB.Views
         {
             int id = 0;
 
-            FornecedorController controller = new FornecedorController();
-            FornecedorCollection collection = new FornecedorCollection();
+            RestauranteController controller = new RestauranteController();
+            RestauranteCollection collection = new RestauranteCollection();
 
-            dgvFornecedores.DataSource = null;
+            dgvRestaurantes.DataSource = null;
 
             if (int.TryParse(txtPesquisa.Text, out id))
             {
-                Fornecedor fornecedor
+                Restaurante restaurante
                     = controller.ConsultarPorId(id);
-                if (fornecedor != null)
-                    collection.Add(fornecedor);
+                if (restaurante != null)
+                    collection.Add(restaurante);
             }
             else
                 collection =
                     controller.ConsultarPorNome(txtPesquisa.Text);
 
-            dgvFornecedores.DataSource = collection;
+            dgvRestaurantes.DataSource = collection;
 
-            dgvFornecedores.Update(); //Atualizar fonte de dados
-            dgvFornecedores.Refresh(); //Atulizar os dados exibidos
+            dgvRestaurantes.Update(); //Atualizar fonte de dados
+            dgvRestaurantes.Refresh(); //Atulizar os dados exibidos
+        }
+        private Restaurante RecuperarRestaurante()
+        {
+            if (dgvRestaurantes.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum registro selecionado.",
+                    "Informação", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return null;
+            }
+            else
+            {
+                //Este método recupera o objeto da linha 
+                //selecionada na Grade
+                return dgvRestaurantes.SelectedRows[0].DataBoundItem
+                as Restaurante;
+            }
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            FornecedorController controller = new FornecedorController();
-            Fornecedor fornecedorSelecionado =
+            RestauranteController controller = new RestauranteController();
+            Restaurante restauranteSelecionado =
                 controller.ConsultarPorId(
-                    Convert.ToInt32(dgvFornecedores.SelectedRows[0].
+                    Convert.ToInt32(dgvRestaurantes.SelectedRows[0].
                     Cells["Id"].Value));
-                
-            fornecedorSelecionado.Id = Convert.ToInt32(dgvFornecedores.SelectedRows[0].
+
+            restauranteSelecionado.Id = Convert.ToInt32(dgvRestaurantes.SelectedRows[0].
                     Cells["Id"].Value);
 
-            frmCadFornecedorView frm = new frmCadFornecedorView(fornecedorSelecionado);
+            frmCadRestauranteView frm = new frmCadRestauranteView(restauranteSelecionado);
             frm.ShowDialog();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Fornecedor fornecedorSelecionado = RecuperarFornecedor();
+            Restaurante restauranteSelecionado = RecuperarRestaurante();
 
-            if (fornecedorSelecionado != null)
+            if (restauranteSelecionado != null)
             {
                 if (MessageBox.Show(
                     "Deseja realmente excluir o registro?",
@@ -94,9 +110,9 @@ namespace ProjetoPOOB.Views
                 {
 
 
-                    FornecedorController controller = new FornecedorController();
+                    RestauranteController controller = new RestauranteController();
 
-                    if (controller.Excluir(fornecedorSelecionado.Id) > 0)
+                    if (controller.Excluir(restauranteSelecionado.Id) > 0)
                     {
                         MessageBox.Show("Registro excluído com sucesso.",
                             "Informação", MessageBoxButtons.OK,
@@ -110,24 +126,6 @@ namespace ProjetoPOOB.Views
                             MessageBoxIcon.Warning);
 
                 }
-            }
-        }
-
-        private Fornecedor RecuperarFornecedor()
-        {
-            if (dgvFornecedores.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Nenhum registro selecionado.",
-                    "Informação", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-                return null;
-            }
-            else
-            {
-                //Este método recupera o objeto da linha 
-                //selecionada na Grade
-                return dgvFornecedores.SelectedRows[0].DataBoundItem
-                as Fornecedor;
             }
         }
     }

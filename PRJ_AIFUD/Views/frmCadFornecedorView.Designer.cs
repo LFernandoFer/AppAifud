@@ -39,6 +39,8 @@
             this.mskCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -138,7 +140,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.btnSalvar.Location = new System.Drawing.Point(342, 225);
+            this.btnSalvar.Location = new System.Drawing.Point(366, 225);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(125, 38);
             this.btnSalvar.TabIndex = 10;
@@ -146,12 +148,35 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnAlterar.Location = new System.Drawing.Point(441, 184);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(125, 38);
+            this.btnAlterar.TabIndex = 11;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.AutoSize = true;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(298, 225);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(0, 13);
+            this.txtId.TabIndex = 12;
+            this.txtId.Visible = false;
+            // 
             // frmCadFornecedorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(578, 294);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.mskCNPJ);
@@ -164,6 +189,7 @@
             this.Controls.Add(this.txtFornecedor);
             this.Controls.Add(this.label1);
             this.Name = "frmCadFornecedorView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCadFornecedorView";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,5 +209,7 @@
         private System.Windows.Forms.MaskedTextBox mskCNPJ;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Label txtId;
     }
 }

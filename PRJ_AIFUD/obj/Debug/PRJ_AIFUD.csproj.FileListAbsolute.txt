@@ -19,14 +19,12 @@ E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe.confi
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\bin\Debug\ProjetoPOOB.pdb
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.AssemblyReference.cache
-E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.frmCadCliente.resources
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Properties.Resources.resources
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.GenerateResource.cache
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.CoreCompileInputs.cache
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.exe
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.pdb
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Home.resources
-E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.frmCadProduto.resources
 E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmClienteColecao.resources
 C:\Users\unifafibe.UNIDC_ACD\Documents\GitHub\AppAifud\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe.config
 C:\Users\unifafibe.UNIDC_ACD\Documents\GitHub\AppAifud\PRJ_AIFUD\bin\Debug\ProjetoPOOB.exe
@@ -89,3 +87,7 @@ C:\Users\Unifafibe\Downloads\AppAifud-main\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.
 C:\Users\Unifafibe\Downloads\AppAifud-main\PRJ_AIFUD\obj\Debug\PRJ_AIFUD.csproj.CoreCompileInputs.cache
 C:\Users\Unifafibe\Downloads\AppAifud-main\PRJ_AIFUD\obj\Debug\ProjetoPOOB.exe
 C:\Users\Unifafibe\Downloads\AppAifud-main\PRJ_AIFUD\obj\Debug\ProjetoPOOB.pdb
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.frmCadProdutoView.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmCadRestauranteView.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.Views.frmRestauranteColecao.resources
+E:\Users\Cliente\Repositorios\AppAifud\PRJ_AIFUD\obj\Debug\ProjetoPOOB.frmCadClienteView.resources

@@ -54,9 +54,9 @@ namespace ProjetoPOOB.Controllers
                 "CLI_NOME = @Nome, " +
                 "CLI_CPF = @CPF, " +
                 "CLI_DataNascimento = @DataNascimento, " +
-                "CLI_ENDERECO = @Endereco" +
+                "CLI_ENDERECO = @Endereco," +
                 "CLI_TELEFONE = @telefone " +
-                "WHERE id_cliente = @IdCliente";
+                "WHERE CLI_Id = @IdCliente";
 
             dataBase.LimparParametros();
             dataBase.AdicionarParametros("@Nome", cliente.Nome);
@@ -157,8 +157,7 @@ namespace ProjetoPOOB.Controllers
         #endregion
 
         public int Excluir(int IdCliente)
-        {
-            
+        { 
             string query =
                 "Delete from Cliente where CLI_ID = @CLI_Id";
 

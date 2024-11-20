@@ -80,7 +80,7 @@ namespace ProjetoPOOB.Views
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            frmCadCliente frm = new frmCadCliente();
+            frmCadClienteView frm = new frmCadClienteView();
             frm.ShowDialog();
         }
 
@@ -91,54 +91,39 @@ namespace ProjetoPOOB.Views
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.SelectedRows.Count == 0)
+            Cliente clienteSelecionado = RecuperarCliente();
+
+            if (clienteSelecionado != null)
             {
-                MessageBox.Show("Nenhum registro selecionado.");
-                return;
-            }
-
-            DialogResult resultado = MessageBox.Show(
-                "Deseja realmente excluir o registro selecionado?",
-                "Importante",
-                MessageBoxButtons.OKCancel);
-
-            if (resultado == DialogResult.OK)
-            {
-                Cliente clienteSelecionado = RecuperarCliente();
-
-                if (clienteSelecionado != null)
+                if (MessageBox.Show(
+                    "Deseja realmente excluir o registro?",
+                    "Confirmação", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    if (MessageBox.Show(
-                        "Deseja realmente excluir o registro?",
-                        "Confirmação", MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Warning) == DialogResult.Yes)
+
+
+                    ClienteController clienteController = new ClienteController();
+
+                    if (clienteController.Excluir(clienteSelecionado.Id) > 0)
                     {
+                        MessageBox.Show("Registro excluído com sucesso.",
+                            "Informação", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
 
-
-                        ClienteController clienteController = new ClienteController();
-
-                        if (clienteController.Excluir(clienteSelecionado.Id) > 0)
-                        {
-                            MessageBox.Show("Registro excluído com sucesso.",
-                                "Informação", MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-
-                            Pesquisar();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Não foi possível excluir o regsitro.",
-                                "Atenção", MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                        }
+                        Pesquisar();
                     }
+                    else
+                        MessageBox.Show("Não foi possível excluir o regsitro.",
+                            "Atenção", MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                
                 }
             }
         }
 
         private Cliente RecuperarCliente()
         {
-            if (dgvClientes.SelectedRows.Count != 0)
+            if (dgvClientes.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Nenhum registro selecionado.",
                     "Informação", MessageBoxButtons.OK,
@@ -162,7 +147,7 @@ namespace ProjetoPOOB.Views
                     Convert.ToInt32(dgvClientes.SelectedRows[0].
                     Cells["Id"].Value));
 
-            frmCadCliente frm = new frmCadCliente(clienteSelecionado);
+            frmCadClienteView frm = new frmCadClienteView(clienteSelecionado);
             frm.ShowDialog();
 
         }

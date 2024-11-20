@@ -1,6 +1,6 @@
 ﻿namespace ProjetoPOOB
 {
-    partial class frmCadCliente
+    partial class frmCadClienteView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadCliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadClienteView));
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,9 +37,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -117,16 +119,16 @@
             this.mskTelefone.Size = new System.Drawing.Size(308, 38);
             this.mskTelefone.TabIndex = 3;
             // 
-            // button1
+            // btnSalvar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button1.Location = new System.Drawing.Point(451, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 49);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnSalvar.Location = new System.Drawing.Point(381, 210);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(101, 49);
+            this.btnSalvar.TabIndex = 6;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -148,15 +150,37 @@
             this.dtpNascimento.TabIndex = 5;
             this.dtpNascimento.Value = new System.DateTime(2024, 10, 31, 0, 0, 0, 0);
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnAtualizar.Location = new System.Drawing.Point(514, 210);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(137, 49);
+            this.btnAtualizar.TabIndex = 12;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.AutoSize = true;
+            this.txtId.Location = new System.Drawing.Point(410, 182);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(0, 13);
+            this.txtId.TabIndex = 13;
+            this.txtId.Visible = false;
+            // 
             // frmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(685, 289);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.mskCPF);
             this.Controls.Add(this.txtEndereco);
@@ -167,7 +191,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadCliente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastrar Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,8 +208,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox mskCPF;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Label txtId;
     }
 }

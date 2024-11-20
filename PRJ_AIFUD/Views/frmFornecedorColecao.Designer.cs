@@ -29,41 +29,46 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFornecedores = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ramoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fornecedorCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorCollectionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvFornecedores
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
+            this.dgvFornecedores.AutoGenerateColumns = false;
+            this.dgvFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFornecedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.cNPJDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.ramoDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.fornecedorCollectionBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(799, 449);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvFornecedores.DataSource = this.fornecedorCollectionBindingSource;
+            this.dgvFornecedores.Location = new System.Drawing.Point(74, 80);
+            this.dgvFornecedores.Name = "dgvFornecedores";
+            this.dgvFornecedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFornecedores.Size = new System.Drawing.Size(642, 341);
+            this.dgvFornecedores.TabIndex = 0;
             // 
-            // idDataGridViewTextBoxColumn
+            // Id
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
             // 
             // cNPJDataGridViewTextBoxColumn
             // 
@@ -99,30 +104,96 @@
             // 
             this.fornecedorCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.FornecedorCollection);
             // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtPesquisa.Location = new System.Drawing.Point(74, 31);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(144, 30);
+            this.txtPesquisa.TabIndex = 1;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnPesquisar.Location = new System.Drawing.Point(224, 30);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(108, 33);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnCadastrar.Location = new System.Drawing.Point(348, 31);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(108, 33);
+            this.btnCadastrar.TabIndex = 3;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnAlterar.Location = new System.Drawing.Point(478, 30);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(108, 33);
+            this.btnAlterar.TabIndex = 4;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnExcluir.Location = new System.Drawing.Point(608, 30);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(108, 33);
+            this.btnExcluir.TabIndex = 5;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmFornecedorColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.txtPesquisa);
+            this.Controls.Add(this.dgvFornecedores);
             this.Name = "frmFornecedorColecao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmFornecedorColecao";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Activated += new System.EventHandler(this.frmFornecedorColecao_Activated);
+            this.Load += new System.EventHandler(this.frmFornecedorColecao_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorCollectionBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvFornecedores;
+        private System.Windows.Forms.BindingSource fornecedorCollectionBindingSource;
+        private System.Windows.Forms.TextBox txtPesquisa;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn cNPJDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ramoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource fornecedorCollectionBindingSource;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

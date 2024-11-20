@@ -48,16 +48,21 @@
   <ItemGroup>
     <Compile Include="Controllers\FornecedorController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
+    <Compile Include="Controllers\pedidoItemController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
+    <Compile Include="Controllers\RestauranteController.cs" />
     <Compile Include="Models\Fornecedor.cs" />
     <Compile Include="Models\FornecedorCollection.cs" />
     <Compile Include="Models\FuncionarioCollections.cs" />
     <Compile Include="Models\Funcionarios.cs" />
-    <Compile Include="Views\frmCadCliente.cs">
+    <Compile Include="Models\Restaurante.cs" />
+    <Compile Include="Models\RestauranteCollection.cs" />
+    <Compile Include="Views\frmCadClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmCadCliente.Designer.cs">
-      <DependentUpon>frmCadCliente.cs</DependentUpon>
+    <Compile Include="Views\frmCadClienteView.Designer.cs">
+      <DependentUpon>frmCadClienteView.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Views\frmCadFornecedorView.cs">
@@ -72,11 +77,17 @@
     <Compile Include="Views\frmCadFuncionarioView.Designer.cs">
       <DependentUpon>frmCadFuncionarioView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmCadProduto.cs">
+    <Compile Include="Views\frmCadProdutoView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmCadProduto.Designer.cs">
-      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    <Compile Include="Views\frmCadProdutoView.Designer.cs">
+      <DependentUpon>frmCadProdutoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmCadRestauranteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmCadRestauranteView.Designer.cs">
+      <DependentUpon>frmCadRestauranteView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmClienteColecao.cs">
       <SubType>Form</SubType>
@@ -114,6 +125,12 @@
     <Compile Include="Views\frmPedidoView.Designer.cs">
       <DependentUpon>frmPedidoView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmRestauranteColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmRestauranteColecao.Designer.cs">
+      <DependentUpon>frmRestauranteColecao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,8 +154,11 @@
     <EmbeddedResource Include="Views\frmCadFuncionarioView.resx">
       <DependentUpon>frmCadFuncionarioView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmCadProduto.resx">
-      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmCadProdutoView.resx">
+      <DependentUpon>frmCadProdutoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmCadRestauranteView.resx">
+      <DependentUpon>frmCadRestauranteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmClienteColecao.resx">
       <DependentUpon>frmClienteColecao.cs</DependentUpon>
@@ -158,11 +178,14 @@
     <EmbeddedResource Include="Views\frmPedidoView.resx">
       <DependentUpon>frmPedidoView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmRestauranteColecao.resx">
+      <DependentUpon>frmRestauranteColecao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmCadCliente.resx">
-      <DependentUpon>frmCadCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmCadClienteView.resx">
+      <DependentUpon>frmCadClienteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,6 +202,7 @@
     <None Include="Properties\DataSources\ProjetoPOOB.Models.FuncionarioCollections.datasource" />
     <None Include="Properties\DataSources\ProjetoPOOB.Models.PedidoCollection.datasource" />
     <None Include="Properties\DataSources\ProjetoPOOB.Models.ProdutoCollection.datasource" />
+    <None Include="Properties\DataSources\ProjetoPOOB.Models.RestauranteCollection.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

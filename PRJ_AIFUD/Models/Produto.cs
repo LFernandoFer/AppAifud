@@ -8,5 +8,6 @@
         public decimal PrecoVenda { get; set; }
         public int EstoqueAtual { get; set; }
         public string UnMedida { get; set; }
+        public int Restaurante { get; set; }
     }
 }

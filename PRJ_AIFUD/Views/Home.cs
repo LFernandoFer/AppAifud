@@ -21,19 +21,20 @@ namespace ProjetoPOOB
 
         public void AtualizaDataHora()
         {
+            timer1.Start();
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblData.Text = DateTime.Now.ToLongDateString();
         }
 
            private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadCliente frm = new frmCadCliente();
+            frmCadClienteView frm = new frmCadClienteView();
             frm.ShowDialog();
         }
 
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmCadProduto frm = new frmCadProduto();
+            frmCadProdutoView frm = new frmCadProdutoView();
             frm.ShowDialog();
         }
 
@@ -57,7 +58,7 @@ namespace ProjetoPOOB
 
         private void fazerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPedidoView frm = new frmPedidoView();
+            frmCadRestauranteView frm = new frmCadRestauranteView();
             frm.ShowDialog();
         }
 
@@ -81,7 +82,7 @@ namespace ProjetoPOOB
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultarPedidoView frm = new frmConsultarPedidoView();
+            frmRestauranteColecao frm = new frmRestauranteColecao();
             frm.ShowDialog();
         }
 
