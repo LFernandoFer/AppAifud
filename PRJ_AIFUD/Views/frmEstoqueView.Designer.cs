@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estoqueAtualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +37,10 @@
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtoCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoCollectionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,46 @@
             this.dgvProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProdutos.Size = new System.Drawing.Size(645, 362);
             this.dgvProdutos.TabIndex = 0;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "IdProduto";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // nomeProdutoDataGridViewTextBoxColumn
+            // 
+            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "NomeProduto";
+            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Produto";
+            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
+            // 
+            // estoqueAtualDataGridViewTextBoxColumn
+            // 
+            this.estoqueAtualDataGridViewTextBoxColumn.DataPropertyName = "EstoqueAtual";
+            this.estoqueAtualDataGridViewTextBoxColumn.HeaderText = "Estoque Atual";
+            this.estoqueAtualDataGridViewTextBoxColumn.Name = "estoqueAtualDataGridViewTextBoxColumn";
+            // 
+            // unMedidaDataGridViewTextBoxColumn
+            // 
+            this.unMedidaDataGridViewTextBoxColumn.DataPropertyName = "UnMedida";
+            this.unMedidaDataGridViewTextBoxColumn.HeaderText = "Un Medida";
+            this.unMedidaDataGridViewTextBoxColumn.Name = "unMedidaDataGridViewTextBoxColumn";
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            // 
+            // precoVendaDataGridViewTextBoxColumn
+            // 
+            this.precoVendaDataGridViewTextBoxColumn.DataPropertyName = "PrecoVenda";
+            this.precoVendaDataGridViewTextBoxColumn.HeaderText = "Preco de Venda";
+            this.precoVendaDataGridViewTextBoxColumn.Name = "precoVendaDataGridViewTextBoxColumn";
+            // 
+            // produtoCollectionBindingSource
+            // 
+            this.produtoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.ProdutoCollection);
             // 
             // txtPesquisa
             // 
@@ -104,46 +144,6 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "IdProduto";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // nomeProdutoDataGridViewTextBoxColumn
-            // 
-            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "NomeProduto";
-            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Produto";
-            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
-            // 
-            // estoqueAtualDataGridViewTextBoxColumn
-            // 
-            this.estoqueAtualDataGridViewTextBoxColumn.DataPropertyName = "EstoqueAtual";
-            this.estoqueAtualDataGridViewTextBoxColumn.HeaderText = "Estoque Atual";
-            this.estoqueAtualDataGridViewTextBoxColumn.Name = "estoqueAtualDataGridViewTextBoxColumn";
-            // 
-            // unMedidaDataGridViewTextBoxColumn
-            // 
-            this.unMedidaDataGridViewTextBoxColumn.DataPropertyName = "UnMedida";
-            this.unMedidaDataGridViewTextBoxColumn.HeaderText = "Un Medida";
-            this.unMedidaDataGridViewTextBoxColumn.Name = "unMedidaDataGridViewTextBoxColumn";
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            // 
-            // precoVendaDataGridViewTextBoxColumn
-            // 
-            this.precoVendaDataGridViewTextBoxColumn.DataPropertyName = "PrecoVenda";
-            this.precoVendaDataGridViewTextBoxColumn.HeaderText = "Preco de Venda";
-            this.precoVendaDataGridViewTextBoxColumn.Name = "precoVendaDataGridViewTextBoxColumn";
-            // 
-            // produtoCollectionBindingSource
-            // 
-            this.produtoCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.ProdutoCollection);
             // 
             // frmEstoqueView
             // 

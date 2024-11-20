@@ -211,7 +211,7 @@
             this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblData.ForeColor = System.Drawing.Color.Black;
             this.lblData.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.lblData.Location = new System.Drawing.Point(172, 434);
+            this.lblData.Location = new System.Drawing.Point(157, 434);
             this.lblData.Name = "lblData";
             this.lblData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblData.Size = new System.Drawing.Size(271, 21);

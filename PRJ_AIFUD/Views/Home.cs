@@ -95,5 +95,11 @@ namespace ProjetoPOOB
         {
             AtualizaDataHora();
         }
+
+        private void consultarProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCardapioView frm = new frmCardapioView();
+            frm.ShowDialog();
+        }
     }
 }

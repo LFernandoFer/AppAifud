@@ -91,10 +91,9 @@ namespace ProjetoPOOB
 
             RestauranteCollection collection = controller.ConsultarPorNome("");
 
-            // Verifica se a coleção de clientes não está vazia
+            
             if (collection.Count > 0)
             {
-                // Itera sobre todos os clientes da coleção
                 foreach (Restaurante restaurante in collection)
                 {
                     cmbRestaurante.Items.Add(restaurante.Nome);
