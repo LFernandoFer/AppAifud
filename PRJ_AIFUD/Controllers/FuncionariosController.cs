@@ -58,14 +58,14 @@ namespace ProjetoPOOB.Controllers
         public int Alterar(Funcionarios funcionario)
         {
             string queryAlterar =
-                "UPDATE cliente SET " +
+                "UPDATE FUNCIONARIO SET " +
                 "FUNC_NOME = @Nome, " +
                 "FUNC_CPF = @CPF, " +
                 "FUNC_DataNascimento = @DataNascimento, " +
-                "FUNC_ENDERECO = @Endereco" +
-                "FUNC_TELEFONE = @telefone " +
-                "FUNC_FUNCAO = @Funcao"+
-                "FUNC_TURNO = @Turno" +
+                "FUNC_ENDERECO = @Endereco, " +
+                "FUNC_TELEFONE = @telefone, " +
+                "FUNC_FUNCAO = @Funcao, "+
+                "FUNC_TURNO = @Turno " +
                 "WHERE Func_Id = @FuncId";
 
             dataBase.LimparParametros();
@@ -78,8 +78,9 @@ namespace ProjetoPOOB.Controllers
             dataBase.AdicionarParametros("@Turno", funcionario.Turno);
             dataBase.AdicionarParametros("@FuncId", funcionario.Id);
 
-            return dataBase.ExecutarManipulacao(
+            dataBase.ExecutarManipulacao(
                 CommandType.Text, queryAlterar);
+            return 0;
         }
         #endregion
         #region ConsultarPorNome

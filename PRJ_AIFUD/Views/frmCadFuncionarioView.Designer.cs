@@ -44,6 +44,8 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtTurno = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -62,7 +64,7 @@
             this.dtpNascimento.Location = new System.Drawing.Point(25, 226);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(308, 38);
-            this.dtpNascimento.TabIndex = 19;
+            this.dtpNascimento.TabIndex = 3;
             this.dtpNascimento.Value = new System.DateTime(2024, 10, 31, 0, 0, 0, 0);
             // 
             // label5
@@ -82,7 +84,7 @@
             this.mskTelefone.Mask = "(99) 00000-0000";
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(308, 38);
-            this.mskTelefone.TabIndex = 16;
+            this.mskTelefone.TabIndex = 4;
             // 
             // mskCPF
             // 
@@ -91,7 +93,7 @@
             this.mskCPF.Mask = "000,000,000-00";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(308, 38);
-            this.mskCPF.TabIndex = 14;
+            this.mskCPF.TabIndex = 2;
             this.mskCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtEndereco
@@ -100,7 +102,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(375, 137);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(308, 30);
-            this.txtEndereco.TabIndex = 17;
+            this.txtEndereco.TabIndex = 5;
             // 
             // label4
             // 
@@ -138,7 +140,7 @@
             this.txtNome.Location = new System.Drawing.Point(25, 56);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(308, 30);
-            this.txtNome.TabIndex = 13;
+            this.txtNome.TabIndex = 1;
             // 
             // label6
             // 
@@ -156,7 +158,7 @@
             this.txtFuncao.Location = new System.Drawing.Point(25, 317);
             this.txtFuncao.Name = "txtFuncao";
             this.txtFuncao.Size = new System.Drawing.Size(308, 30);
-            this.txtFuncao.TabIndex = 23;
+            this.txtFuncao.TabIndex = 6;
             // 
             // label7
             // 
@@ -171,10 +173,10 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.btnSalvar.Location = new System.Drawing.Point(458, 302);
+            this.btnSalvar.Location = new System.Drawing.Point(371, 302);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(147, 45);
-            this.btnSalvar.TabIndex = 24;
+            this.btnSalvar.TabIndex = 8;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -185,7 +187,7 @@
             this.txtTurno.Location = new System.Drawing.Point(375, 226);
             this.txtTurno.Name = "txtTurno";
             this.txtTurno.Size = new System.Drawing.Size(308, 30);
-            this.txtTurno.TabIndex = 26;
+            this.txtTurno.TabIndex = 7;
             // 
             // label8
             // 
@@ -197,12 +199,34 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Turno";
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.btnAlterar.Location = new System.Drawing.Point(526, 302);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(157, 45);
+            this.btnAlterar.TabIndex = 26;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.AutoSize = true;
+            this.txtId.Location = new System.Drawing.Point(313, 15);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(0, 13);
+            this.txtId.TabIndex = 27;
+            this.txtId.Visible = false;
+            // 
             // frmCadFuncionarioView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(702, 371);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.txtTurno);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnSalvar);
@@ -244,5 +268,7 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtTurno;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Label txtId;
     }
 }

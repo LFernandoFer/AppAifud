@@ -41,6 +41,11 @@ namespace ProjetoPOOB
             MessageBox.Show("Cliente nº " + controler.Inserir(cliente)
                 + " cadastrado com sucesso");
 
+            txtNome.Clear();
+            txtEndereco.Clear();
+            mskCPF.Clear();
+            mskTelefone.Clear();
+            txtId.Text = "";
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)

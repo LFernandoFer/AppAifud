@@ -75,5 +75,78 @@ namespace ProjetoPOOB.Views
             frmCadFuncionarioView frm = new frmCadFuncionarioView();
             frm.ShowDialog();
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            FuncionariosController controller = new FuncionariosController();
+            Funcionarios FuncionarioSelecionado =
+                controller.ConsultarPorId(
+                    Convert.ToInt32(dgvFuncionarios.SelectedRows[0].
+                    Cells["Id"].Value));
+
+            frmCadFuncionarioView frm = new frmCadFuncionarioView(FuncionarioSelecionado);
+            frm.ShowDialog();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Funcionarios funcionarioSelecionado = RecuperarFuncionario();
+            
+            if (funcionarioSelecionado != null)
+            {
+                if (MessageBox.Show(
+                    "Deseja realmente excluir o funcionario?",
+                    "Confirmação", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+
+
+                    FuncionariosController controller = new FuncionariosController();
+
+                    if (controller.Excluir(funcionarioSelecionado.Id) > 0)
+                    {
+                        MessageBox.Show("Registro excluído com sucesso.",
+                            "Informação", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+                        Pesquisar();
+                    }
+                    else
+                        MessageBox.Show("Não foi possível excluir o produto.",
+                            "Atenção", MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+
+                }
+            }
+        }
+
+        private Funcionarios RecuperarFuncionario()
+        {
+            if (dgvFuncionarios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum registro selecionado.",
+                    "Informação", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return null;
+            }
+            else
+            {
+                //Este método recupera o objeto da linha 
+                //selecionada na Grade
+                return dgvFuncionarios.SelectedRows[0].DataBoundItem
+                as Funcionarios;
+            }
+        }
+
+        private void frmFuncionarioColecao_Load(object sender, EventArgs e)
+        {
+            Pesquisar();
+        }
+
+        private void frmFuncionarioColecao_Activated(object sender, EventArgs e)
+        {
+            Pesquisar();
+        }
     }
 }
+

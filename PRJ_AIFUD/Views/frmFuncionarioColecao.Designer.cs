@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.funcaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,9 +44,6 @@
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.funcionarioCollectionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioCollectionsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +53,7 @@
             this.dgvFuncionarios.AutoGenerateColumns = false;
             this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFuncionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.nomeDataGridViewTextBoxColumn,
             this.cPFDataGridViewTextBoxColumn,
             this.funcaoDataGridViewTextBoxColumn,
@@ -63,6 +67,59 @@
             this.dgvFuncionarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvFuncionarios.Size = new System.Drawing.Size(724, 340);
             this.dgvFuncionarios.TabIndex = 0;
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Location = new System.Drawing.Point(1, 12);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(224, 20);
+            this.txtPesquisa.TabIndex = 1;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(231, 12);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(312, 12);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrar.TabIndex = 3;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(393, 12);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 4;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(474, 12);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 5;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -110,39 +167,14 @@
             // 
             this.funcionarioCollectionsBindingSource.DataSource = typeof(ProjetoPOOB.Models.FuncionarioCollections);
             // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Location = new System.Drawing.Point(1, 12);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(224, 20);
-            this.txtPesquisa.TabIndex = 1;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(231, 12);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisar.TabIndex = 2;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Location = new System.Drawing.Point(312, 12);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrar.TabIndex = 3;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
             // frmFuncionarioColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(725, 380);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtPesquisa);
@@ -150,6 +182,8 @@
             this.Name = "frmFuncionarioColecao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmFuncionarioColecao";
+            this.Activated += new System.EventHandler(this.frmFuncionarioColecao_Activated);
+            this.Load += new System.EventHandler(this.frmFuncionarioColecao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioCollectionsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -164,6 +198,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPFDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn funcaoDataGridViewTextBoxColumn;
@@ -171,6 +209,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtNascimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnCadastrar;
     }
 }
