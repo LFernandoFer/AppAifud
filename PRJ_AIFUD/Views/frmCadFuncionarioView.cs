@@ -65,11 +65,12 @@ namespace ProjetoPOOB.Views
             funcionario.Funcao = txtFuncao.Text;
 
             FuncionariosController controler = new FuncionariosController();
+            controler.Alterar(funcionario);
             DialogResult resultado =
-                MessageBox.Show("Funcionário " + controler.Alterar(funcionario)
+                MessageBox.Show("Funcionário "
                + " alterado com sucesso! Deseja fechar?", "Sucesso!",
                MessageBoxButtons.YesNo);
-            if(resultado == DialogResult.Yes)
+            if (resultado == DialogResult.Yes)
             {
                 Close();
             }

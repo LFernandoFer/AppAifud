@@ -52,7 +52,7 @@ namespace ProjetoPOOB.Controllers
             //pelo Identity
             //SELECT MAX(id_cliente) FROM cliente
             return Convert.ToInt32(dataBase.ExecutarConsultaScalar(
-                CommandType.Text, "SELECT MAX(CLI_ID) FROM cliente"));
+                CommandType.Text, "SELECT MAX(FUNC_ID) FROM FUNCIONARIO"));
         }
         #region
         public int Alterar(Funcionarios funcionario)
