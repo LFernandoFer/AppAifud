@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionarioColecao));
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.funcaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,24 +63,32 @@
             this.telefoneDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn});
             this.dgvFuncionarios.DataSource = this.funcionarioCollectionsBindingSource;
-            this.dgvFuncionarios.Location = new System.Drawing.Point(1, 41);
+            this.dgvFuncionarios.Location = new System.Drawing.Point(1, 72);
             this.dgvFuncionarios.Name = "dgvFuncionarios";
             this.dgvFuncionarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvFuncionarios.Size = new System.Drawing.Size(724, 340);
+            this.dgvFuncionarios.Size = new System.Drawing.Size(724, 296);
             this.dgvFuncionarios.TabIndex = 0;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
             // 
             // txtPesquisa
             // 
+            this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtPesquisa.Location = new System.Drawing.Point(1, 12);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(224, 20);
+            this.txtPesquisa.Size = new System.Drawing.Size(224, 30);
             this.txtPesquisa.TabIndex = 1;
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnPesquisar.Location = new System.Drawing.Point(231, 12);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.Size = new System.Drawing.Size(121, 30);
             this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
@@ -87,9 +96,10 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(312, 12);
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnCadastrar.Location = new System.Drawing.Point(358, 12);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(109, 30);
             this.btnCadastrar.TabIndex = 3;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -97,9 +107,10 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(393, 12);
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnAlterar.Location = new System.Drawing.Point(473, 12);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(109, 30);
             this.btnAlterar.TabIndex = 4;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -107,19 +118,14 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(474, 12);
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnExcluir.Location = new System.Drawing.Point(588, 12);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(94, 30);
             this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -179,9 +185,10 @@
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.dgvFuncionarios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmFuncionarioColecao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmFuncionarioColecao";
+            this.Text = "Funcionários ";
             this.Activated += new System.EventHandler(this.frmFuncionarioColecao_Activated);
             this.Load += new System.EventHandler(this.frmFuncionarioColecao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();

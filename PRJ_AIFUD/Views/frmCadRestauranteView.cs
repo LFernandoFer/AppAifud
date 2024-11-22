@@ -45,6 +45,12 @@ namespace ProjetoPOOB.Views
             MessageBox.Show("Restaurante nº " +
             controller.Inserir(restaurante) +
             " cadastrado com sucesso!", "Sucesso!");
+
+            txtFornecedor.Clear();
+            mskCNPJ.Clear();
+            mskTelefone.Clear();
+            txtTema.Clear();
+            txtEndereco.Clear();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)

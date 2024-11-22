@@ -32,6 +32,12 @@ namespace ProjetoPOOB.Views
         {
             Pesquisar();
         }
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            frmCadProdutoView frm = new frmCadProdutoView();
+            frm.ShowDialog();
+        }
+
         #endregion
         public void Pesquisar()
         {
@@ -139,5 +145,6 @@ namespace ProjetoPOOB.Views
                 as Produto;
             }
         }
+
     }
 }

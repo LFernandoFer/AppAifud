@@ -44,7 +44,7 @@ namespace ProjetoPOOB.Controllers
                  "PROD_PRECO = @PRECO," +
                  "PROD_ESTOQUE = @ESTOQUE," +
                  "PROD_UNIDMED = @UNMED, " +
-                 "PROD_RESTAURANTE = @RESTAURANTE" +
+                 "PROD_RESTAURANTE = @RESTAURANTE " +
                  "WHERE PROD_ID = @IdProduto";
 
             DataBaseSqlServerService dataBase = new DataBaseSqlServerService();
@@ -87,8 +87,10 @@ namespace ProjetoPOOB.Controllers
                 produto.PrecoVenda = Convert.ToDecimal(dataRow["PROD_PRECO"]);
                 produto.EstoqueAtual = Convert.ToInt32(dataRow["PROD_ESTOQUE"]);
                 produto.UnMedida = Convert.ToString(dataRow["PROD_UNIDMED"]);
-                produto.Restaurante = Convert.ToInt32(dataRow["PROD_RESTAURANTE"]);
-             
+
+                if (!(dataRow["PROD_RESTAURANTE"] is DBNull))
+                    produto.Restaurante = Convert.ToInt32(dataRow["PROD_RESTAURANTE"]);
+                else { produto.Restaurante = -1; }
                 colecao.Add(produto);
             }
             return colecao;
@@ -121,7 +123,10 @@ namespace ProjetoPOOB.Controllers
                 produto.PrecoVenda = Convert.ToDecimal(dataTable.Rows[0]["PROD_PRECO"]);
                 produto.EstoqueAtual = Convert.ToInt32(dataTable.Rows[0]["PROD_ESTOQUE"]);
                 produto.UnMedida = Convert.ToString(dataTable.Rows[0]["PROD_UNIDMED"]);
-                produto.Restaurante = Convert.ToInt32(dataTable.Rows[0]["PROD_RESTAURANTE"]);
+
+                if (!(dataTable.Rows[0]["PROD_RESTAURANTE"] is DBNull))
+                { produto.Restaurante = Convert.ToInt32(dataTable.Rows[0]["PROD_RESTAURANTE"]); }
+                else { produto.Restaurante = -1; }
                 //Somente irei popular o atributo DtNascimento
                 //Se o valor no banco de dados 
                 //não estiver NULL

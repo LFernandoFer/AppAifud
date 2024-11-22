@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadRestauranteView));
             this.txtId = new System.Windows.Forms.Label();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -187,8 +188,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFornecedor);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadRestauranteView";
-            this.Text = "frmCadRestaurante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Cadastrar Restaurante";
             this.ResumeLayout(false);
             this.PerformLayout();
 

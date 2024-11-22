@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClienteColecao));
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
@@ -60,34 +61,37 @@
             this.telefoneDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn});
             this.dgvClientes.DataSource = this.clienteCollectionBindingSource;
-            this.dgvClientes.Location = new System.Drawing.Point(-1, 50);
+            this.dgvClientes.Location = new System.Drawing.Point(29, 60);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(645, 306);
+            this.dgvClientes.Size = new System.Drawing.Size(643, 306);
             this.dgvClientes.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(12, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(71, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Pesquisar";
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(15, 24);
+            this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtPesquisa.Location = new System.Drawing.Point(25, 24);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(198, 20);
+            this.txtPesquisa.Size = new System.Drawing.Size(198, 30);
             this.txtPesquisa.TabIndex = 1;
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(241, 22);
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnPesquisar.Location = new System.Drawing.Point(229, 24);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.Size = new System.Drawing.Size(113, 30);
             this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
@@ -95,9 +99,10 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(343, 23);
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnCadastrar.Location = new System.Drawing.Point(348, 24);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(114, 30);
             this.btnCadastrar.TabIndex = 3;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -105,9 +110,10 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(440, 23);
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnExcluir.Location = new System.Drawing.Point(580, 24);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(92, 30);
             this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -115,11 +121,12 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(538, 23);
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnAlterar.Location = new System.Drawing.Point(468, 24);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(106, 30);
             this.btnAlterar.TabIndex = 5;
-            this.btnAlterar.Text = "Atualizar";
+            this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
@@ -168,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(643, 353);
+            this.ClientSize = new System.Drawing.Size(718, 387);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCadastrar);
@@ -176,9 +183,10 @@
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvClientes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmClienteColecao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmClienteColecao";
+            this.Text = "Clientes";
             this.Activated += new System.EventHandler(this.frmClienteColecao_Activated);
             this.Load += new System.EventHandler(this.frmClienteColecao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();

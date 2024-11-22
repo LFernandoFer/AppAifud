@@ -108,10 +108,10 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.btnSalvar.Location = new System.Drawing.Point(350, 394);
+            this.btnSalvar.Location = new System.Drawing.Point(354, 394);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(104, 43);
-            this.btnSalvar.TabIndex = 6;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -194,7 +194,7 @@
             this.cmbRestaurante.Location = new System.Drawing.Point(12, 404);
             this.cmbRestaurante.Name = "cmbRestaurante";
             this.cmbRestaurante.Size = new System.Drawing.Size(243, 33);
-            this.cmbRestaurante.TabIndex = 12;
+            this.cmbRestaurante.TabIndex = 6;
             // 
             // frmCadProdutoView
             // 
@@ -220,7 +220,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadProdutoView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmCadProduto";
+            this.Text = "Cadastrar Produto";
             this.Load += new System.EventHandler(this.frmCadProdutoView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

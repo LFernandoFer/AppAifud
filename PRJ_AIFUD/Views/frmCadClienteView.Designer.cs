@@ -157,7 +157,7 @@
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(137, 49);
             this.btnAtualizar.TabIndex = 12;
-            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.Text = "Alterar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
@@ -170,7 +170,7 @@
             this.txtId.TabIndex = 13;
             this.txtId.Visible = false;
             // 
-            // frmCadCliente
+            // frmCadClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +190,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmCadCliente";
+            this.Name = "frmCadClienteView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastrar Cliente";
             this.ResumeLayout(false);

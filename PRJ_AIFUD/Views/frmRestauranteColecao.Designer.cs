@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRestauranteColecao));
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.dgvRestaurantes = new System.Windows.Forms.DataGridView();
-            this.restauranteCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.restauranteCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRestaurantes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteCollectionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -116,10 +117,6 @@
             this.dgvRestaurantes.Size = new System.Drawing.Size(642, 341);
             this.dgvRestaurantes.TabIndex = 6;
             // 
-            // restauranteCollectionBindingSource
-            // 
-            this.restauranteCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.RestauranteCollection);
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
@@ -156,6 +153,10 @@
             this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
             this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
             // 
+            // restauranteCollectionBindingSource
+            // 
+            this.restauranteCollectionBindingSource.DataSource = typeof(ProjetoPOOB.Models.RestauranteCollection);
+            // 
             // frmRestauranteColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,8 +169,10 @@
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.dgvRestaurantes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRestauranteColecao";
-            this.Text = "frmRestauranteColecao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Restaurantes";
             this.Activated += new System.EventHandler(this.frmRestauranteColecao_Activated);
             this.Load += new System.EventHandler(this.frmRestauranteColecao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRestaurantes)).EndInit();

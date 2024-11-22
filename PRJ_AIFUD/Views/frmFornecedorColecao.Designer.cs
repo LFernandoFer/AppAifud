@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFornecedorColecao));
             this.dgvFornecedores = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -168,9 +169,10 @@
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.dgvFornecedores);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmFornecedorColecao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmFornecedorColecao";
+            this.Text = "Fornecedores";
             this.Activated += new System.EventHandler(this.frmFornecedorColecao_Activated);
             this.Load += new System.EventHandler(this.frmFornecedorColecao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();

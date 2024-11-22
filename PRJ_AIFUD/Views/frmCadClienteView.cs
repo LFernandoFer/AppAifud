@@ -62,8 +62,11 @@ namespace ProjetoPOOB
             ClienteController controller = new ClienteController();
             
             controller.Alterar(cliente);
-
-            MessageBox.Show("Alteração realizada com sucesso!", "Sucesso!");
+            DialogResult resultado =
+            MessageBox.Show("Alteração realizada com sucesso! Deseja fechar?",
+            "Sucesso!", MessageBoxButtons.YesNo);
+            if (resultado == DialogResult.Yes)
+            { Close();}
         }
     }
 }

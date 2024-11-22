@@ -26,14 +26,21 @@ namespace ProjetoPOOB
         {
             InitializeComponent();
             btnSalvar.Visible = false;
+         
 
+            RestauranteController restController = new RestauranteController();
+            Restaurante restaurante =
+                restController.ConsultarPorId(produto.Restaurante);
+            
             txtId.Text = Convert.ToString(produto.IdProduto);
             txtNomeProd.Text = produto.NomeProduto;
             mskPreco.Text = Convert.ToString(produto.PrecoVenda);
             txtDescricao.Text = produto.Descricao;
             mskEstoque.Text = Convert.ToString(produto.EstoqueAtual);
             txtUnMedida.Text = produto.UnMedida;
-            
+            if (restaurante != null)
+            { cmbRestaurante.Text = restaurante.Nome; }
+            else { cmbRestaurante.Text = "";}
             btnSalvar.Enabled = false;
         }
 
@@ -49,8 +56,17 @@ namespace ProjetoPOOB
             produto.PrecoVenda = Math.Round(Convert.ToDecimal(mskPreco.Text), 2);
             produto.EstoqueAtual = Convert.ToInt32(mskEstoque.Text);
             produto.Restaurante = GetIdRestaurante(cmbRestaurante.Text);
-            MessageBox.Show("Poduto nº" + controler.Inserir(produto));
-            ApagarCampos();
+
+            if (produto.Restaurante < 0)
+            {
+                MessageBox.Show("Selecione um restaurante válido",
+                     "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Poduto nº" + controler.Inserir(produto));
+                ApagarCampos();
+            }
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
@@ -62,16 +78,25 @@ namespace ProjetoPOOB
             produto.UnMedida = txtUnMedida.Text;
             produto.PrecoVenda = Math.Round(Convert.ToDecimal(mskPreco.Text), 2);
             produto.EstoqueAtual = Convert.ToInt32(mskEstoque.Text);
+            produto.Restaurante = GetIdRestaurante(cmbRestaurante.Text);
 
-            ProdutosController controller = new ProdutosController();
-            controller.Alterar(produto);
-
-            DialogResult resultado = MessageBox.Show("Produto alterado " +
-                "com sucesso! Deseja fechar?", "Sucesso!",
-                MessageBoxButtons.YesNo);
-            if (resultado == DialogResult.Yes)
+            if (produto.Restaurante < 0)
             {
-                Close();
+                MessageBox.Show("Selecione um restaurante válido",
+                     "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                ProdutosController controller = new ProdutosController();
+                controller.Alterar(produto);
+
+                DialogResult resultado = MessageBox.Show("Produto alterado " +
+                    "com sucesso! Deseja fechar?", "Sucesso!",
+                    MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    Close();
+                }
             }
         }
         void ApagarCampos()
@@ -88,7 +113,6 @@ namespace ProjetoPOOB
 
             RestauranteController controller = new RestauranteController();
 
-
             RestauranteCollection collection = controller.ConsultarPorNome("");
 
             
@@ -99,17 +123,25 @@ namespace ProjetoPOOB
                     cmbRestaurante.Items.Add(restaurante.Nome);
                 }
             }
+            
         }
         int GetIdRestaurante(string restaurante)
         { // Criando o controller e buscando o restaurante
-            RestauranteController controller = new RestauranteController();
-            RestauranteCollection collection = controller.ConsultarPorNome(restaurante);
+            if (!string.IsNullOrEmpty(cmbRestaurante.Text))
+            {
+                RestauranteController controller = new RestauranteController();
+                RestauranteCollection collection = controller.ConsultarPorNome(restaurante);
 
-            if (collection.Count > 0)
-            {   
-                return collection[0].Id;
+                if (collection.Count > 0)
+                {
+                    return collection[0].Id;
+                }
+                return 0;
             }
-            return -1;
+            else
+            {
+                return -1;
+            }
         }
     }
 }
